@@ -10,15 +10,11 @@ Component({
     },
     title: {
       type: String,
-      value: '我的订单',
-    },
-    desc: {
-      type: String,
-      value: '全部订单',
+      value: '',
     },
     isTop: {
       type: Boolean,
-      value: true,
+      value: false,
     },
     classPrefix: {
       type: String,

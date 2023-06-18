@@ -43,11 +43,11 @@
       },
       {
         "pagePath": "pages/goods/category/index",
-        "text": "分类"
+        "text": "树洞"
       },
       {
         "pagePath": "pages/cart/index",
-        "text": "购物车"
+        "text": "学长答疑"
       },
       {
         "pagePath": "pages/usercenter/index",
@@ -55,7 +55,9 @@
       }
     ]
   },
-  "requiredPrivateInfos": ["chooseAddress"],
+  "requiredPrivateInfos": [
+    "chooseAddress"
+  ],
   "lazyCodeLoading": "requiredComponents",
   "usingComponents": {},
   "window": {

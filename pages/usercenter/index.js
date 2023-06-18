@@ -3,44 +3,29 @@ import {
 } from '../../services/usercenter/fetchUsercenter';
 import Toast from 'tdesign-miniprogram/toast/index';
 
-// const menuData = [
-//   [
-//     {
-//       title: '收货地址',
-//       tit: '',
-//       url: '',
-//       type: 'address',
-//     },
-//     {
-//       title: '优惠券',
-//       tit: '',
-//       url: '',
-//       type: 'coupon',
-//     },
-//     {
-//       title: '积分',
-//       tit: '',
-//       url: '',
-//       type: 'point',
-//     },
-//   ],
-//   [
-//     {
-//       title: '帮助中心',
-//       tit: '',
-//       url: '',
-//       type: 'help-center',
-//     },
-//     {
-//       title: '客服热线',
-//       tit: '',
-//       url: '',
-//       type: 'service',
-//       icon: 'service',
-//     },
-//   ],
-// ];
-const menuData = []
+const menuData = [
+  [{
+      title: '帮助中心',
+      tit: '',
+      url: '',
+      type: 'help-center',
+    },
+    {
+      title: '客服热线',
+      tit: '',
+      url: '',
+      type: 'service',
+      icon: '',
+    },
+  ],
+  [{
+    title: '退出登录',
+    tilte: '',
+    url: '',
+    type: 'logout',
+    icon: ''
+  }]
+];
 const orderTagInfos = [{
     title: '我发布的',
     iconName: 'wallet',
@@ -145,12 +130,6 @@ Page({
     } = currentTarget.dataset;
 
     switch (type) {
-      case 'address': {
-        wx.navigateTo({
-          url: '/pages/usercenter/address/list/index'
-        });
-        break;
-      }
       case 'service': {
         this.openMakePhone();
         break;
@@ -165,19 +144,17 @@ Page({
         });
         break;
       }
-      case 'point': {
+      case 'logout': {
+        this.setData({
+          userInfo: {},
+          currAuthStep: 1
+        })
         Toast({
           context: this,
           selector: '#t-toast',
-          message: '你点击了积分菜单',
+          message: '退出成功!',
           icon: '',
           duration: 1000,
-        });
-        break;
-      }
-      case 'coupon': {
-        wx.navigateTo({
-          url: '/pages/coupon/coupon-list/index'
         });
         break;
       }

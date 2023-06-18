@@ -1,5 +1,4 @@
-export default [
-  {
+export default [{
     icon: 'home',
     text: '圈子',
     url: 'pages/home/home',
@@ -11,7 +10,7 @@ export default [
   },
   {
     icon: 'cart',
-    text: '购物车',
+    text: '学长答疑',
     url: 'pages/cart/index',
   },
   {

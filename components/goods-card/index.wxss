@@ -3,6 +3,7 @@
   font-size: 24rpx;
   border-radius: 0 0 16rpx 16rpx;
   border-bottom: none;
+  background-color: #4de448;
 }
 
 .goods-card__main {
@@ -11,7 +12,7 @@
   line-height: 1;
   padding: 0;
   background: transparent;
-  width: 342rpx;
+  width: 342*2rpx;
   border-radius: 0 0 16rpx 16rpx;
   align-items: center;
   justify-content: center;

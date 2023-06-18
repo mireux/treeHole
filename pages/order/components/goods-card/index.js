@@ -80,7 +80,10 @@ Component({
           }
         }
 
-        this.setData({ goods, isValidityLinePrice });
+        this.setData({
+          goods,
+          isValidityLinePrice
+        });
       },
     },
     layout: {
@@ -158,7 +161,9 @@ Component({
   data: {
     hiddenInData: false,
     independentID: '',
-    goods: { id: '' },
+    goods: {
+      id: ''
+    },
     /** 保证划线价格不小于原价，否则不渲染划线价 */
     isValidityLinePrice: false,
   },
@@ -174,19 +179,32 @@ Component({
 
   methods: {
     clickHandle() {
-      this.triggerEvent('click', { goods: this.data.goods });
+      this.triggerEvent('click', {
+        goods: this.data.goods
+      });
     },
     clickThumbHandle() {
-      this.triggerEvent('thumb', { goods: this.data.goods });
+      this.triggerEvent('thumb', {
+        goods: this.data.goods
+      });
     },
     clickTagHandle(evt) {
-      const { index } = evt.currentTarget.dataset;
-      this.triggerEvent('tag', { goods: this.data.goods, index });
+      const {
+        index
+      } = evt.currentTarget.dataset;
+      this.triggerEvent('tag', {
+        goods: this.data.goods,
+        index
+      });
     },
     // 加入购物车
     addCartHandle(e) {
-      const { id } = e.currentTarget;
-      const { id: cardID } = e.currentTarget.dataset;
+      const {
+        id
+      } = e.currentTarget;
+      const {
+        id: cardID
+      } = e.currentTarget.dataset;
       this.triggerEvent('add-cart', {
         ...e.detail,
         id,
@@ -202,11 +220,17 @@ Component({
         // `goods-card-88888888`
         independentID = `goods-card-${~~(Math.random() * 10 ** 8)}`;
       }
-      this.setData({ independentID }, cb);
+      this.setData({
+        independentID
+      }, cb);
     },
 
     init() {
-      const { thresholds, id, hidden } = this.properties;
+      const {
+        thresholds,
+        id,
+        hidden
+      } = this.properties;
       if (hidden !== null) {
         this.setHidden(!!hidden);
       }
@@ -223,7 +247,9 @@ Component({
     },
 
     setHidden(hidden) {
-      this.setData({ hiddenInData: !!hidden });
+      this.setData({
+        hiddenInData: !!hidden
+      });
     },
 
     createIntersectionObserverHandle() {
