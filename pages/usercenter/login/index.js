@@ -1,13 +1,23 @@
-// pages/goods/details/index.js
+// pages/usercenter/login/index.js
+const defaultAvatarUrl = 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0'
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    avatarUrl: defaultAvatarUrl,
+    inputValue: ''
   },
-
+  onChooseAvatar(e) {
+    const {
+      avatarUrl
+    } = e.detail
+    this.setData({
+      avatarUrl,
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -62,5 +72,22 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+
+  getUserAvatar() {
+    console.log("获取头像");
+  },
+
+  bindKeyInput: function (e) {
+    console.log(e);
+    this.setData({
+      inputValue: e.detail.value
+    })
+  },
+  onSubmit() {
+    console.log("登录");
+    wx.switchTab({
+      url: '/pages/usercenter/index',
+    })
   }
 })

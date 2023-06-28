@@ -6,7 +6,7 @@
     "pages/usercenter/address/list/index",
     "pages/usercenter/address/edit/index",
     "pages/goods/list/index",
-    "pages/goods/details/index",
+    "pages/post/detail/index",
     "pages/goods/category/index",
     "pages/goods/search/index",
     "pages/goods/result/index",
@@ -28,7 +28,10 @@
     "pages/order/fill-tracking-no/index",
     "pages/order/delivery-detail/index",
     "pages/order/invoice/index",
-    "pages/usercenter/name-edit/index"
+    "pages/usercenter/name-edit/index",
+    "pages/usercenter/login/index",
+    "pages/post/new-post/index",
+    "pages/post/qa-module/index"
   ],
   "tabBar": {
     "custom": true,
@@ -42,11 +45,7 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/goods/category/index",
-        "text": "树洞"
-      },
-      {
-        "pagePath": "pages/cart/index",
+        "pagePath": "pages/post/qa-module/index",
         "text": "学长答疑"
       },
       {

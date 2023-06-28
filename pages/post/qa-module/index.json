@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "学长答疑",
+  "onReachBottomDistance": 10,
+  "backgroundTextStyle": "light",
+  "enablePullDownRefresh": true,
+  "usingComponents": {}
+}

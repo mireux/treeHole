@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "新增",
+  "usingComponents": {
+    "t-radio": "tdesign-miniprogram/radio/radio",
+    "t-radio-group": "tdesign-miniprogram/radio-group/radio-group",
+    "t-input": "tdesign-miniprogram/input/input",
+    "t-upload": "tdesign-miniprogram/upload/upload",
+    "t-button": "tdesign-miniprogram/button/button"
+  }
+}

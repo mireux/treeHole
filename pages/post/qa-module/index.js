@@ -1,10 +1,4 @@
-import {
-  fetchHome
-} from '../../services/home/home';
-import {
-  fetchGoodsList
-} from '../../services/good/fetchGoods';
-import Toast from 'tdesign-miniprogram/toast/index';
+
 
 Page({
   data: {
@@ -118,28 +112,13 @@ Page({
   },
 
   goodListClickHandle(e) {
+    console.log(222);
     const {
       index
     } = e.detail;
-    const {
-      spuId
-    } = this.data.goodsList[index];
+    console.log(index);
     wx.navigateTo({
       url: `/pages/post/detail/index?index=${index}`,
-    });
-  },
-
-  goodListAddCartHandle() {
-    Toast({
-      context: this,
-      selector: '#t-toast',
-      message: '点击加入购物车',
-    });
-  },
-
-  navToSearchPage() {
-    wx.navigateTo({
-      url: '/pages/goods/search/index'
     });
   },
 

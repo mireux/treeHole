@@ -4,14 +4,9 @@ export default [{
     url: 'pages/home/home',
   },
   {
-    icon: 'sort',
-    text: '树洞',
-    url: 'pages/goods/category/index',
-  },
-  {
-    icon: 'cart',
+    icon: 'home',
     text: '学长答疑',
-    url: 'pages/cart/index',
+    url: 'pages/post/qa-module/index',
   },
   {
     icon: 'person',

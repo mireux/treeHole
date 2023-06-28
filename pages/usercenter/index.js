@@ -172,15 +172,46 @@ Page({
   },
 
   jumpNav(e) {
+    console.log(e);
     const status = e.detail.tabType;
-
+    console.log(status);
     if (status === 0) {
-      wx.navigateTo({
-        url: '/pages/order/after-service-list/index'
+      Toast({
+        context: this,
+        selector: '#t-toast',
+        message: '你点击了回复通知',
+        icon: '',
+        duration: 1000,
+      });
+      // wx.navigateTo({
+      //   url: '/pages/order/after-service-list/index'
+      // });
+    } else if (status === 5) {
+      // wx.navigateTo({
+      //   url: `/pages/order/order-list/index?status=${status}`
+      // });
+      Toast({
+        context: this,
+        selector: '#t-toast',
+        message: '你点击了我发布的',
+        icon: '',
+        duration: 1000,
+      });
+    } else if (status === 10) {
+      Toast({
+        context: this,
+        selector: '#t-toast',
+        message: '你点击了我喜欢的',
+        icon: '',
+        duration: 1000,
       });
     } else {
-      wx.navigateTo({
-        url: `/pages/order/order-list/index?status=${status}`
+      Toast({
+        context: this,
+        selector: '#t-toast',
+        message: '你点击了我评论的',
+        icon: '',
+        duration: 1000,
       });
     }
   },
@@ -218,7 +249,10 @@ Page({
         url: '/pages/usercenter/person-info/index'
       });
     } else {
-      this.fetUseriInfoHandle();
+      wx.navigateTo({
+        url: '/pages/usercenter/login/index'
+      })
+      // this.fetUseriInfoHandle();
     }
   },
 

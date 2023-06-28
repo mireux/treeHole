@@ -1,0 +1,20 @@
+<!-- <view>
+  <view class="user-center-card__header" bind:tap="getUserAvatar">
+    <t-avatar image="{{defaultAvatarUrl}}" class="user-center-card__header__avatar" size="large" />
+  </view>
+</view>
+<view class="name-edit">
+  <t-input borderless model:value="{{nameValue}}" placeholder="请输入昵称" label="昵称" clearable bind:clear="clearContent" />
+  <view class="name-edit__input--desc"> 请输入昵称 </view>
+  <view class="name-edit__wrapper">
+    <t-button block shape="round" disabled="{{!nameValue}}" bind:tap="onSubmit">登录</t-button>
+  </view>
+</view> -->
+<button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+  <image class="avatar" src="{{avatarUrl}}"></image>
+</button>
+<view class="title">昵称:</view>
+<input type="nickname" class="weui-input" placeholder="请输入昵称" bindinput="bindKeyInput" model:value="{{inputValue}}" />
+<view class="name-edit__wrapper">
+  <t-button theme="light" size="large" block shape="round" disabled="{{inputValue == ''}}" bind:tap="onSubmit">登录</t-button>
+</view>

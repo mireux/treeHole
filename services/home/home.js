@@ -17,6 +17,9 @@ function mockFetchHome() {
       tabList: [{
         text: '圈子',
         key: 0,
+      }, {
+        text: '树洞',
+        key: 1,
       }],
       activityImg: `${cdnBase}/activity/banner.png`,
     };
