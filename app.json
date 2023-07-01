@@ -31,7 +31,9 @@
     "pages/usercenter/name-edit/index",
     "pages/usercenter/login/index",
     "pages/post/new-post/index",
-    "pages/post/qa-module/index"
+    "pages/post/qa-module/index",
+    "pages/grouping/index",
+    "pages/value-add/index"
   ],
   "tabBar": {
     "custom": true,
@@ -42,7 +44,7 @@
     "list": [
       {
         "pagePath": "pages/home/home",
-        "text": "首页"
+        "text": "广场"
       },
       {
         "pagePath": "pages/post/qa-module/index",
@@ -50,7 +52,7 @@
       },
       {
         "pagePath": "pages/usercenter/index",
-        "text": "我的"
+        "text": "个人中心"
       }
     ]
   },

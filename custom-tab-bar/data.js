@@ -1,6 +1,6 @@
 export default [{
     icon: 'home',
-    text: '圈子',
+    text: '广场',
     url: 'pages/home/home',
   },
   {
