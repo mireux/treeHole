@@ -8,15 +8,17 @@ Page({
    */
   data: {
     avatarUrl: defaultAvatarUrl,
-    inputValue: ''
+    inputValue: '123'
   },
   onChooseAvatar(e) {
     const {
       avatarUrl
     } = e.detail
+    console.log(e);
     this.setData({
       avatarUrl,
     })
+    console.log(this.data.avatarUrl);
   },
   /**
    * 生命周期函数--监听页面加载
@@ -84,10 +86,59 @@ Page({
       inputValue: e.detail.value
     })
   },
-  onSubmit() {
-    console.log("登录");
-    wx.switchTab({
-      url: '/pages/usercenter/index',
+  onSubmit(e) {
+    console.log(e);
+    // console.log(this.data.avatarUrl);
+    // console.log(this.data.inputValue);
+    // console.log("登录");
+    wx.uploadFile({
+      filePath: this.data.avatarUrl,
+      name: 'avatarImg',
+      header: {
+        "Content-Type": "multipart/form-data"
+      },
+      url: 'http://localhost:8989/upload/avatar', //服务器端接收图片的路径
+      success: function (res) {
+        const data = JSON.parse(res.data)
+        console.log(data); //发送成功回调
+        if (data.code !== 200) {
+          Toast({
+            context: this,
+            selector: '#t-toast',
+            message: data.message,
+            icon: '',
+            duration: 1000,
+          });
+        } else {
+          // 上传成功 进行登陆
+          wx.login({
+            success: (res) => {
+              wx.request({
+                url: 'http://localhost:8989/login',
+                method: 'POST',
+                data: {
+                  "code": res.code,
+                  "nickName": "lhjlhj",
+                  "avatar": data.data
+                },
+                success: function (res) {
+                  console.log(res.data)
+                  if (res.data.code === 200) {
+                    // 登陆成功 
+                    // TODO获取数据并且返回给上一级或者存储到全局变量中
+                    wx.setStorageSync('loginData', res.data.data)
+                    wx.switchTab({
+                      url: '/pages/usercenter/index',
+                    })
+                  }
+                }
+              })
+            },
+          })
+        }
+      }
     })
+
+
   }
 })

@@ -1,0 +1,29 @@
+<t-toast id="t-toast" />
+<t-divider wx:if="{{id === '1'}}" content="机票服务" align="left" />
+<t-divider wx:if="{{id === '2'}}" content="租车服务" align="left" />
+<t-row>
+  <t-col span="24" t-class="dark">
+    <t-input label="姓名" placeholder="请输入姓名"></t-input>
+  </t-col>
+</t-row>
+<t-row>
+  <t-col span="24" t-class="dark">
+    <t-input label="电话" placeholder="请输入电话"></t-input>
+  </t-col>
+</t-row>
+<t-row>
+  <t-col span="24" t-class="dark">
+    <t-input label="微信号" placeholder="请输入微信号"></t-input>
+  </t-col>
+</t-row>
+<t-row>
+  <t-col span="24" t-class="dark">
+    <t-input label="时间" placeholder="请输入大致时间"></t-input>
+  </t-col>
+</t-row>
+
+<t-row>
+  <t-col span="20" t-class="button">
+    <t-button theme="primary" size="large" variant="outline" bindtap="submitInfo">提交</t-button>
+  </t-col>
+</t-row>

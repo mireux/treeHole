@@ -1,1 +1,17 @@
 /* pages/value-add/index.wxss */
+.value-card {
+  height: 400rpx;
+  border-radius: 20rpx;
+  margin-bottom: 40rpx;
+  /* margin-top: 40rpx; */
+}
+
+.value-card .plane {
+  width: 100%;
+  /* margin-top: 40rpx; */
+}
+
+.value-card .car {
+  width: 100%;
+  /* margin-top: 40rpx; */
+}

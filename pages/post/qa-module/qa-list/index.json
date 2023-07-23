@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "qa-card": "/pages/post/qa-module/qa-card/index"
+  }
+}

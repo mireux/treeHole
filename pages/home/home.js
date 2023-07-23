@@ -31,7 +31,7 @@ Page({
       color: 'orange',
       badge: 2,
       name: '树洞',
-      url: '',
+      url: '/pages/home/home',
     }, {
       icon: 'noticefill',
       color: 'yellow',
@@ -42,7 +42,7 @@ Page({
       icon: 'questionfill',
       color: 'olive',
       badge: 4,
-      name: '其他',
+      name: '服务',
       url: '/pages/value-add/index',
     }], //九宫格数据
     gridCol: 4, //九宫格显示行数
@@ -108,7 +108,7 @@ Page({
     let that = this;
     let url = that.data.iconList[e.currentTarget.dataset.index].url;
     if (e.currentTarget.dataset.index === 0) {
-      this.loadGoodsList()
+      this.loadGoodsList(true)
     } else if (e.currentTarget.dataset.index === 1) {
       this.setData({
         goodsList: []
@@ -135,7 +135,7 @@ Page({
 
   },
   fabHandleClick(e) {
-    console.log("添加新的树洞");
+    // console.log("添加新的树洞");
     wx.navigateTo({
       url: `/pages/post/new-post/index`,
     });
@@ -198,7 +198,9 @@ Page({
     }
 
     try {
-      const nextList = await fetchGoodsList(pageIndex, pageSize);
+      // const nextList = await fetchGoodsList(pageIndex, pageSize);
+      const nextList = await getPostList();
+      console.log(nextList);
       this.setData({
         goodsList: fresh ? nextList : this.data.goodsList.concat(nextList),
         goodsListLoadStatus: 0,

@@ -1,0 +1,25 @@
+<view class="cu-card dynamic ">
+  <view class="cu-item ">
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <view class="cu-avatar round lg" style="background-image:url({{avatar}});"></view>
+        <view class="content flex-sub">
+          <view>{{name}}</view>
+          <view class="text-gray text-sm flex justify-between">
+            2023年6月6日
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="text-content">
+      {{title}}
+    </view>
+
+    <view class="text-gray text-sm text-right padding">
+      <text class="cuIcon-attentionfill margin-lr-xs"></text> {{view}}
+      <text class="cuIcon-appreciatefill margin-lr-xs"></text> {{like}}
+      <text class="cuIcon-messagefill margin-lr-xs"></text> {{comment}}
+    </view>
+
+  </view>
+</view>

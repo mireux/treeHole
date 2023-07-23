@@ -1,4 +1,5 @@
 // pages/post/new-post/index.js
+const $api = require('../../../services/_utils/api').API
 Page({
 
   /**
@@ -73,7 +74,20 @@ Page({
   onReachBottom() {
 
   },
-
+  createPost(e) {
+    let openId = wx.getStorageSync('loginData').openId
+    console.log(openId);
+    let data = {
+      publishUser: openId,
+      postTitle: "测试",
+      postBody: "测试内容时这个，你说能不能一次成功",
+      tags: 0,
+      contactInformation: '15330477982'
+    }
+    $api.addPost(data).then(res => {
+      console.log(res);
+    })
+  },
   /**
    * 用户点击右上角分享
    */

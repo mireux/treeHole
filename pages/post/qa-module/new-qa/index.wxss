@@ -1,0 +1,18 @@
+/* pages/post/qa-module/new-qa/index.wxss */
+.dark {
+  margin-top: 30rpx;
+}
+
+.upload-image {
+  background-color: white;
+}
+
+.wrapper {
+  padding-bottom: 20rpx;
+  padding-left: 20rpx;
+}
+
+.button {
+  margin-top: 100rpx;
+  margin-left: 290rpx;
+}

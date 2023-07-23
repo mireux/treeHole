@@ -60,7 +60,7 @@ const getDefaultData = () => ({
   userInfo: {
     avatarUrl: '',
     nickName: '正在登录...',
-    phoneNumber: '',
+    // phoneNumber: '',
   },
   menuData,
   orderTagInfos,
@@ -71,15 +71,49 @@ const getDefaultData = () => ({
 });
 
 Page({
-  data: getDefaultData(),
+  data: {
+    showMakePhone: false,
+    userInfo: {
+      avatarUrl: '',
+      nickName: '',
+      // phoneNumber: '',
+    },
+    menuData,
+    orderTagInfos,
+    customerServiceInfo: {},
+    currAuthStep: 1,
+    showKefu: true,
+    versionNo: '',
+  },
 
-  onLoad() {
+  onLoad(option) {
     this.getVersionInfo();
   },
 
   onShow() {
+    try {
+      console.log(this.data.userInfo);
+      var value = wx.getStorageSync('loginData')
+      if (value) {
+        // Do something with return value
+        console.log(value.avatar);
+        this.setData({
+          userInfo: value,
+          currAuthStep: 2
+        })
+        console.log(this.data.userInfo);
+      }
+    } catch (e) {
+      // Do something when catch error
+    }
     this.getTabBar().init();
-    this.init();
+    // console.log("show ");
+    // const loginData = wx.getStorageSync('loginData')
+    // console.log(loginData);
+    // this.setData({
+    //   userInfo: loginData
+    // })
+    // this.init();
   },
   onPullDownRefresh() {
     this.init();
@@ -149,6 +183,7 @@ Page({
           userInfo: {},
           currAuthStep: 1
         })
+        wx.removeStorageSync('loginData')
         Toast({
           context: this,
           selector: '#t-toast',

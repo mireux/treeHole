@@ -1,0 +1,5 @@
+/* pages/value-add/fill_info/index.wxss */
+.button {
+  margin-top: 100rpx;
+  margin-left: 290rpx;
+}

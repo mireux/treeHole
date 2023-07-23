@@ -106,3 +106,39 @@ page {
   --td-tab-item-color: #666;
   --td-tab-track-color: red;
 }
+
+/* .bg-white {
+  background-color: var(--white);
+  color: var(--darkGray);
+} */
+
+/* ==================
+         导航栏
+ ==================== */
+.flex {
+  display: flex;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.nav {
+  white-space: nowrap;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.nav .cu-item {
+  height: 90rpx;
+  display: inline-block;
+  line-height: 90rpx;
+  margin: 0 10rpx;
+  padding: 0 20rpx;
+}
+
+.nav .cu-item.cur {
+  border-bottom: 4rpx solid;
+}

@@ -1,0 +1,5 @@
+<view class="goods-list-wrap wr-class" id="{{independentID}}">
+  <block wx:for="{{qaList}}" wx:for-item="qa" wx:key="index">
+    <qa-card class="goods-card-inside" title="{{qa.title}}" tag="{{qa.tag}}" name="{{qa.name}}" avatar="{{qa.avatar}}" view="{{qa.view}}" like="{{qa.like}}" comment="{{qa.comment}}" data-index="{{index}}" />
+  </block>
+</view>

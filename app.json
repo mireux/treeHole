@@ -33,7 +33,10 @@
     "pages/post/new-post/index",
     "pages/post/qa-module/index",
     "pages/grouping/index",
-    "pages/value-add/index"
+    "pages/value-add/index",
+    "pages/value-add/fill_info/index",
+    "pages/post/qa-module/new-qa/index",
+    "pages/grouping/new-group/index"
   ],
   "tabBar": {
     "custom": true,

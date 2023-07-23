@@ -1,2 +1,44 @@
 <!--pages/grouping/index.wxml-->
-<text>组局页面</text>
+<t-divider />
+<view class="group-header">
+  <view class="group-button">
+    <view class="group-button-style my-group">我的组局</view>
+    <view class="group-button-style start-group">发起组局</view>
+  </view>
+  <view class="group-tags">
+    <!-- 后期获取tags -->
+    <view class="tags">空位</view>
+    <view class="tags">学习</view>
+    <view class="tags">玩乐</view>
+    <view class="tags">吃喝</view>
+    <view class="tags">运动</view>
+    <view class="tags">拼车</view>
+    <view class="tags">拼单</view>
+    <view class="tags">其他</view>
+  </view>
+</view>
+<t-divider />
+<view class="group-body">
+  <view class="group-card">
+    <view class="group-card-top">
+      <view class="group-title" style="padding-top: 20rpx;">晚上拼车去机场</view>
+      <view class="group-tag">拼车</view>
+    </view>
+    <view class="group-card-bottom">
+      <view class="group-human-count">人数：1/3</view>
+      <view class="group-time">2023.07.06</view>
+    </view>
+  </view>
+  <view class="group-card">
+    <view class="group-card-top">
+      <view class="group-title">宁波club蹦迪</view>
+      <view class="group-tag">玩乐</view>
+    </view>
+    <view class="group-card-bottom">
+      <view class="group-human-count">人数：1/13</view>
+      <view class="group-time">2023.06.06</view>
+    </view>
+  </view>
+  <!-- <group-list wr-class="group-list-container" groupList="{{groupList}}" bind:tap="groupListClickHandle" />
+  <load-more list-is-empty="{{!groupList.length}}" status="{{groupListLoadStatus}}" bind:retry="onReTry" /> -->
+</view>

@@ -54,4 +54,4 @@
   </view>
 </view>
 
-<t-button theme="light" size="large" style="margin-top: 20rpx;left: 250rpx;">提交</t-button>
+<t-button theme="light" size="large" style="margin-top: 20rpx;left: 250rpx;" bindtap="createPost">提交</t-button>

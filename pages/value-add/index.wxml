@@ -1,2 +1,13 @@
 <!--pages/value-add/index.wxml-->
-<text>增值服务</text>
+<t-divider content="机票服务" align="left" />
+<t-row>
+  <t-col offset="1" span="22" t-class="value-card">
+    <image class="plane" mode="aspectFill" src="{{planeImageSrc}}" bindtap="fillInfo" data-valueType="1"></image>
+  </t-col>
+</t-row>
+<t-divider content="租车服务" align="left" />
+<t-row>
+  <t-col offset="1" span="22" t-class="value-card car">
+    <image class="plane" mode="aspectFill" src="{{carImageSrc}}" bindtap="fillInfo" data-valueType="2"></image>
+  </t-col>
+</t-row>

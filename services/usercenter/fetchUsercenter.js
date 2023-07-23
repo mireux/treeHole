@@ -13,6 +13,6 @@ export function fetchUserCenter() {
     return mockFetchUserCenter();
   }
   return new Promise((resolve) => {
-    resolve('real api');
+    // resolve('real api');
   });
 }

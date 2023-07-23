@@ -1,0 +1,40 @@
+<!--pages/post/qa-module/new-qa/index.wxml-->
+<t-row>
+  <t-col span="24" t-class="dark">
+    <t-cell class="mb-16" title="学科" arrow hover note="{{subjectText}}" bind:click="onSubjectPicker" />
+    <t-picker visible="{{subjectVisible}}" value="{{subjectValue}}" data-key="subject" title="学科" cancelBtn="取消" confirmBtn="确认" bindchange="onPickerChange" bindpick="onColumnChange" bindcancel="onPickerCancel">
+      <t-picker-item options="{{subjects}}" />
+    </t-picker>
+  </t-col>
+</t-row>
+<t-row>
+  <t-col span="24" t-class="dark">
+    <t-input label="标题" placeholder="请输入标题" value="{{title}}"></t-input>
+  </t-col>
+</t-row>
+<t-row>
+  <t-col span="24" t-class="dark">
+    <t-input label="联系方式" placeholder="请输入联系方式" value="{{relation}}"></t-input>
+  </t-col>
+</t-row>
+<t-row>
+  <t-col span="24" t-class="dark">
+    <t-textarea t-class="external-class" label="内容" placeholder="请输入内容" disableDefaultPadding="{{true}}" value="{{content}}" />
+  </t-col>
+</t-row>
+<t-row>
+  <t-col span="24" t-class="dark upload-image">
+    <view style="padding: 30rpx 30rpx 30rpx 30rpx;">
+      <text style="font-size:30rpx;">上传图片</text>
+    </view>
+    <view class="wrapper">
+      <t-upload media-type="{{['video','image']}}" files="{{originFiles}}" gridConfig="{{gridConfig}}" bind:success="handleSuccess" bind:remove="handleRemove" bind:click="handleClick" />
+    </view>
+  </t-col>
+</t-row>
+
+<t-row>
+  <t-col span="20" t-class="button">
+    <t-button theme="primary" size="large" variant="outline" bindtap="submitInfo">提交</t-button>
+  </t-col>
+</t-row>
