@@ -6,13 +6,13 @@
         <view class="content flex-sub">
           <view>mireux</view>
           <view class="text-gray text-sm flex justify-between">
-            2023年6月6日
+            {{listItem.createTime}}
           </view>
         </view>
       </view>
     </view>
     <view class="text-content">
-      我感到无语
+      {{listItem.postTitle}}
     </view>
 
     <view class="text-gray text-sm text-right padding">

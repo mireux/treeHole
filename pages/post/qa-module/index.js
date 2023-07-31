@@ -136,7 +136,6 @@ Page({
     if (fresh) {
       pageIndex = 0;
     }
-    console.log("1231231232");
     try {
       const nextList = await fetchQaList(pageIndex, pageSize);
       this.setData({

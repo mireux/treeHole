@@ -1,7 +1,7 @@
 const GET = 'GET';
 const POST = 'POST';
 
-const baseURL = 'http://localhost:8989/'; //配置的域名
+const baseURL = 'http://localhost:8989'; //配置的域名
 
 function request(method, url, data) {
   return new Promise(function (resolve, reject) {
@@ -37,7 +37,7 @@ const API = {
   // getList: (data) => request(GET, `/index.php/index/index/getImgList`),
   // getLogin: (data) => request(POST, '/index.php/index/index/login', data)
   addPost: (data) => request(POST, '/post/create', data),
-  getPostList: () => require(GET, '/pot.getAll')
+  getPostList: (data) => request(GET, `/post/getAll`)
 };
 module.exports = {
   API: API

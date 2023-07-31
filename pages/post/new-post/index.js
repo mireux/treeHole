@@ -84,6 +84,7 @@ Page({
       tags: 0,
       contactInformation: '15330477982'
     }
+    console.log(data);
     $api.addPost(data).then(res => {
       console.log(res);
     })
